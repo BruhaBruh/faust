@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  background-color: #fff;
+  color: hsl(322, 51%, 50%);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0rem;
+  user-select: none;
+  text-shadow: 0 0 1vh rgba(238, 200, 224, 0.50);
+  position: relative;
+}
+
+#title {
+  font-size: 10vh;
+  line-height: calc(10vh * 1.2);
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
+#title::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+#comeback {
+  font-size: 6vh;
+  line-height: calc(6vh * 1.2);
+  font-weight: 400;
+}
+
+.highlight {
+  color: hsl(157, 22%, 70%);
+  text-shadow: 0 0 1vh rgba(168, 199, 187, 0.5);
+}
+
+#time {
+  font-family: "Roboto Mono", monospace;
+  font-size: 10vh;
+  line-height: calc(10vh * 1.2);
+  letter-spacing: -1px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#faust {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  object-fit: cover;
+  color: transparent;
+  z-index: -1;
+  filter: brightness(0.5);
+}
